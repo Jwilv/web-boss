@@ -8,5 +8,11 @@ export const routes: Route[] = [
         name:'login',
         component : lazy( ()=> import('../pages/LoginPage')),
     },
+    {
+        path:'/',
+        name:'home',
+        component: lazy( ()=> import('../pages/HomePage') ),
+    },
+    
     
 ]
