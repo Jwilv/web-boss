@@ -13,6 +13,10 @@ export const routes: Route[] = [
         name:'home',
         component: lazy( ()=> import('../pages/HomePage') ),
     },
-    
+    {
+        path:'/register',
+        name:'register',
+        component: lazy( ()=> import('../pages/Register') )
+    }
     
 ]
