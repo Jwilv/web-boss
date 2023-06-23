@@ -1,7 +1,13 @@
+import { useForm } from '../hooks/useform'
 import styles from '../styles/loginAndRegister.module.css'
 
 
-const LoginPage = () => {
+const LoginPage = () => {  
+
+  const {values,changeForm,reset} = useForm();
+
+
+
   return (
     <div className={styles['container-login-logout']}>
 
@@ -14,8 +20,9 @@ const LoginPage = () => {
             <label >Email</label>
             <input
               type="text"
-              // name="email"
+              name="email"
               autoComplete='off'
+              onChange={changeForm}
             />
           </div>
           <div className={styles['input-group']}>
@@ -23,7 +30,8 @@ const LoginPage = () => {
             <input
               autoComplete='off'
               type="password"
-              // name="password"
+              name="password"
+              onChange={changeForm}
             />
           </div>
           <button
